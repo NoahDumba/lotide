@@ -1,4 +1,4 @@
-const arraysEqAssert = function(manta, manta2) {
+const assertArraysEqual = function(manta, manta2) {
   let success = `✅✅✅  [${manta}] === [${manta2}]`;
   let failure = `❌❌❌ [${manta}] !== [${manta2}]`;
 
