@@ -1,7 +1,7 @@
 const assertArraysEqual = function(manta, manta2) {
   if(!eqArrays(manta, manta2)) {
     console.log(`❌❌❌ ${manta} !== ${manta2}`)
-    break;
+    return;
   }
   if(eqArrays(manta, manta2))
   console.log(`✅✅✅  ${manta} === ${manta2}`);
