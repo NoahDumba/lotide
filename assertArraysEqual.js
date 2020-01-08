@@ -1,13 +1,19 @@
 const assertArraysEqual = function(manta, manta2) {
-  if(manta.length !== manta2.length){
+  if(!eqArrays(manta, manta2)) {
     console.log(`❌❌❌ ${manta} !== ${manta2}`)
     break;
   }
+  if(eqArrays(manta, manta2))
+  console.log(`✅✅✅  ${manta} === ${manta2}`);
+};
+
+const eqArrays = function(manta, manta2) {
+  if(manta.length !== manta2.length)
+    return false
 
   for (let i = 0; i < manta.length; i++) {
     if (manta[i] !== manta2[i])
-      console.log(`❌❌❌ ${manta} !== ${manta2}`)
-      break;
+      return false
   }
-  console.log(`✅✅✅  ${manta} === ${manta2}`);
+  return true
 };
