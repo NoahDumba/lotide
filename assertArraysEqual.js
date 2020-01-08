@@ -1,13 +1,17 @@
-const assertArraysEqual = function(manta, manta2) {
-  let success = `✅✅✅  [${manta}] === [${manta2}]`;
-  let failure = `❌❌❌ [${manta}] !== [${manta2}]`;
-
+const eqArrays = function(manta, manta2) {
   if(manta.length !== manta2.length)
-    return console.log(failure);
+    return false
 
   for (let i = 0; i < manta.length; i++) {
     if (manta[i] !== manta2[i])
-      return console.log(failure);
+      return false
   }
-  return console.log(success)
+  return true
+};
+
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected))
+    return (console.log(`✅✅✅  ${actual} === ${expected}`));
+  if (!eqArrays(actual, expected))
+    return (console.log(`❌❌❌ ${actual} !== ${expected}`));
 };
