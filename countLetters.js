@@ -1,5 +1,5 @@
 const countLetters = function(letters) {
-  let results = [];
+  let results = {};
   const manta = letters.split('')
 
   for (const letter of manta) {
