@@ -3,9 +3,9 @@ const assertObjectsEqual = function(object1, object2) {
 
   if(!eqObjects(object1, object2)) {
     console.log(`❌❌❌ ${inspect(object1)} !== ${inspect(object2)}`)
-    return;
+    //return;
   }
-  if(eqObjects(object1, object2))
+  else if(eqObjects(object1, object2))
   console.log(`✅✅✅  ${inspect(object1)} === ${inspect(object2)}`);
 };
 
