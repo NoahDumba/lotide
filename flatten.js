@@ -11,19 +11,4 @@ const flatten = function(manta) {
   return newManta;
 };
 
-const assertArraysEqual = function(manta, manta2) {
-  let success = `✅✅✅  [${manta}] === [${manta2}]`;
-  let failure = `❌❌❌ [${manta}] !== [${manta2}]`;
-
-  if (manta.length !== manta2.length)
-    return console.log(failure);
-
-  for (let i = 0; i < manta.length; i++) {
-    if (manta[i] !== manta2[i])
-      return console.log(failure);
-  }
-  return console.log(success);
-};
-
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-assertArraysEqual(flatten([[1, 2, 3, 4, 5], [6], 7]), [1, 2, 3, 4, 5, 6, 7]);
+module.exports = flatten;
